@@ -4,8 +4,8 @@ RUN apk update \
   &&  apk add --no-cache --virtual .build-deps \
       openrc \
       nginx \
-  && apk del .build-deps
-
+  && apk del .build-deps \
+  && rm -rf /var/cache/apk/*
 
 EXPOSE 80 443
 
